@@ -1,0 +1,30 @@
+/* Identité officielle FAIT. — logo validé */
+.v2-brand {
+  width: 228px;
+  height: 54px;
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+.v2-brand > * { display: none !important; }
+
+.v2-brand::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/brand/fait-logo.svg') left center / contain no-repeat;
+}
+
+.v2-seal {
+  background: url('/brand/fait-mark.svg') center / contain no-repeat !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+.v2-seal svg { display: none !important; }
+
+@media (max-width: 640px) {
+  .v2-brand { width: 165px; height: 46px; }
+}

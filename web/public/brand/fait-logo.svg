@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" role="img" aria-labelledby="title desc">
+  <title id="title">FAIT.</title>
+  <desc id="desc">FAIT. — Vous demandez. C’est fait.</desc>
+  <defs>
+    <linearGradient id="seal" x1="18" y1="14" x2="96" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C9071"/>
+      <stop offset="0.46" stop-color="#2E6B4F"/>
+      <stop offset="1" stop-color="#183F2F"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#183F2F" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <g transform="translate(18 26)">
+    <path filter="url(#shadow)" fill="url(#seal)" d="M60 5c7.6 0 13 6.1 19.8 8.1 7.1 2.1 15-.3 20.5 4.9 5.4 5.2 3.6 13.3 6.2 20.1 2.5 6.5 8.7 11.4 8.7 18.9 0 7.6-6.2 12.4-8.7 18.9-2.6 6.8-.8 14.9-6.2 20.1-5.5 5.2-13.4 2.8-20.5 4.9-6.8 2-12.2 8.1-19.8 8.1s-13-6.1-19.8-8.1c-7.1-2.1-15 .3-20.5-4.9-5.4-5.2-3.6-13.3-6.2-20.1C13 69.4 6.8 64.6 6.8 57c0-7.5 6.2-12.4 8.7-18.9 2.6-6.8.8-14.9 6.2-20.1 5.5-5.2 13.4-2.8 20.5-4.9C49 11.1 52.4 5 60 5Z"/>
+    <circle cx="60" cy="57" r="36" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.5"/>
+    <path d="m38.5 57.5 13.2 13.1 29.8-31" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="160" y="94" fill="#183F2F" font-family="Inter, Avenir Next, Arial, sans-serif" font-size="74" font-weight="650" letter-spacing="-3">FAIT.</text>
+  <text x="163" y="132" fill="#52705F" font-family="Inter, Avenir Next, Arial, sans-serif" font-size="23" font-weight="480" letter-spacing="-0.5">Vous demandez. C’est fait.</text>
+</svg>
