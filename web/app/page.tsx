@@ -1,5 +1,5 @@
-import { FaitConnectedTest } from "@/components/fait-connected-test";
+import { FaitGmailPilot } from "@/components/fait-gmail-pilot";
 
 export default function HomePage() {
-  return <FaitConnectedTest />;
+  return <FaitGmailPilot />;
 }
