@@ -1,13 +1,19 @@
 {
   "project": "FAIT.",
-  "version": "0.1",
+  "version": "0.2",
   "date": "2026-08-03",
   "status": "incubation",
   "priority_split": {
     "Velvet": 80,
     "FAIT": 20
   },
-  "working_name_only": true,
+  "brand_selected": true,
+  "legal_clearance_pending": true,
+  "visual_identity": "Concept 3 - Sceau de confiance",
+  "target_platforms": [
+    "iOS native",
+    "Android native"
+  ],
   "core_promise": "Vous demandez. C'est fait.",
   "repository": "Velvet-Application/Fait"
 }
