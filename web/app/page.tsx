@@ -1,5 +1,5 @@
-import { FaitWebApp } from "@/components/fait-web-app";
+import { FaitWebAppV2 } from "@/components/fait-web-app-v2";
 
 export default function HomePage() {
-  return <FaitWebApp />;
+  return <FaitWebAppV2 />;
 }
