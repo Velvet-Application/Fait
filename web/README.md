@@ -2,6 +2,12 @@
 
 Interface web de démonstration de FAIT., cohérente avec le prototype iOS et adaptée aux usages navigateur.
 
+## URL publique de test
+
+**https://fait-ten.vercel.app/**
+
+Cette URL correspond au déploiement Vercel du prototype web sur la branche de travail. Elle doit être vérifiée après chaque nouveau déploiement avant fusion dans `main`.
+
 ## Technologies
 
 - Next.js 16.2 avec App Router
