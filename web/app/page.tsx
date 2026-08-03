@@ -1,5 +1,5 @@
-import { FaitWebAppV2 } from "@/components/fait-web-app-v2";
+import { FaitConnectedTest } from "@/components/fait-connected-test";
 
 export default function HomePage() {
-  return <FaitWebAppV2 />;
+  return <FaitConnectedTest />;
 }
