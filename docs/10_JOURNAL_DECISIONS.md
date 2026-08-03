@@ -60,3 +60,36 @@ Les quatre statuts structurants sont verrouillés :
 2. **En cours** ;
 3. **Besoin de vous** ;
 4. **Fait**.
+
+### Décision 013 — Technologies natives
+
+Les technologies retenues pour le prototype et la future application sont :
+
+- **Swift + SwiftUI** pour iPhone ;
+- **Kotlin + Jetpack Compose** pour Android.
+
+Une API métier commune porte les dossiers, documents, validations, statuts, événements et preuves. Aucune interface web encapsulée ne doit constituer l'application finale.
+
+### Décision 014 — Navigation du prototype
+
+La navigation principale comprend :
+
+1. Accueil ;
+2. Dossiers ;
+3. Confier ;
+4. Notifications ;
+5. Profil.
+
+L'action **Confier quelque chose** est le point d'entrée central.
+
+### Décision 015 — Objet central
+
+Le **dossier** devient l'objet central du produit. Il regroupe les sources, l'analyse, le plan d'action, les validations, les exécutions, l'historique et la preuve de résolution.
+
+### Décision 016 — Validation figée
+
+Toute validation sensible porte sur un contenu figé. Une modification substantielle du destinataire, du texte, des pièces, de la date, du coût ou de la conséquence impose une nouvelle validation utilisateur.
+
+### Décision 017 — Périmètre du prototype
+
+Le premier prototype ne contient ni paiement, ni accès bancaire, ni marketplace, ni appel vocal IA, ni automatisation irréversible sans accord explicite.
