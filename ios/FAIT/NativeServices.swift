@@ -344,7 +344,7 @@ final class NativeIntegrationController: ObservableObject {
         body: String,
         environment: AppEnvironment
     ) async -> Bool {
-        guard gmailComposeAuthorized else {
+        if !gmailComposeAuthorized {
             await connectGmail(includeCompose: true, environment: environment)
             guard gmailComposeAuthorized else { return false }
         }
