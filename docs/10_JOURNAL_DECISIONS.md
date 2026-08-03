@@ -101,3 +101,11 @@ Le premier prototype est réalisé exclusivement pour **iPhone dans Xcode**, ave
 Il doit être exécutable dans le simulateur et installable sur un iPhone de test. Il utilise des données fictives et des services simulés derrière des protocoles afin de préparer le raccordement futur à l'API.
 
 Android reste une cible produit confirmée, mais sa réalisation est différée jusqu'à validation du parcours, de la navigation, de la confiance et de l'accessibilité sur iPhone.
+
+### Décision 019 — Architecture web V2 verrouillée
+
+L'architecture web V2 devient la référence officielle : aucun menu latéral permanent, en-tête flottant, dock inférieur centré et action **Confier** surélevée. L'accueil reste éditorial et les dossiers sont présentés comme des parcours de résolution, afin de distinguer FAIT. de Velvet et des tableaux de bord SaaS ou IA génériques.
+
+### Décision 020 — Logo final intégré
+
+Le logo final **Sceau de confiance + FAIT. + « Vous demandez. C'est fait. »** est intégré sous forme vectorielle. Le sceau seul devient l'icône de navigateur et la base des futures icônes d'application iOS et Android.
