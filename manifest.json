@@ -1,8 +1,8 @@
 {
   "project": "FAIT.",
-  "version": "0.2",
+  "version": "0.3",
   "date": "2026-08-03",
-  "status": "incubation",
+  "status": "native_prototype_specification",
   "priority_split": {
     "Velvet": 80,
     "FAIT": 20
@@ -11,9 +11,22 @@
   "legal_clearance_pending": true,
   "visual_identity": "Concept 3 - Sceau de confiance",
   "target_platforms": [
-    "iOS native",
-    "Android native"
+    "iOS native - SwiftUI",
+    "Android native - Kotlin Jetpack Compose"
   ],
+  "navigation": [
+    "Accueil",
+    "Dossiers",
+    "Confier",
+    "Notifications",
+    "Profil"
+  ],
+  "founding_use_cases": [
+    "Comprendre et traiter un courrier",
+    "Résilier ou renégocier un contrat",
+    "Anticiper une échéance obligatoire"
+  ],
+  "core_entity": "Case",
   "core_promise": "Vous demandez. C'est fait.",
   "repository": "Velvet-Application/Fait"
 }
