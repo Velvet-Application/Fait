@@ -1,0 +1,16 @@
+ID;Epic;Tâche;Priorité;Statut;Critère de validation
+F-001;Découverte;Réaliser 15 entretiens utilisateurs;Haute;À faire;15 entretiens documentés
+F-002;Découverte;Identifier les 10 démarches les plus fréquentes;Haute;À faire;Classement fréquence/douleur
+F-003;Marque;Vérifier FAIT. à l'INPI et EUIPO;Haute;À faire;Rapport d'antériorité
+F-004;Marque;Vérifier domaines et stores;Haute;À faire;Liste des disponibilités
+F-005;UX;Maquetter l'écran Confier;Haute;À faire;Prototype mobile testable
+F-006;UX;Maquetter le suivi d'un dossier;Haute;À faire;4 statuts compris sans explication
+F-007;Produit;Définir le schéma d'un dossier;Haute;À faire;Modèle de données validé
+F-008;Produit;Définir les niveaux d'autorisation;Haute;À faire;Matrice lecture/préparation/exécution
+F-009;Sécurité;Rédiger la politique de conservation;Haute;À faire;Durées par type de donnée
+F-010;Prototype;Importer une image ou un PDF;Moyenne;À faire;Document stocké et consultable
+F-011;Prototype;Extraire organisme, date et action;Moyenne;À faire;Résultat structuré modifiable
+F-012;Prototype;Générer un plan d'action;Moyenne;À faire;Étapes et validations visibles
+F-013;Prototype;Générer un courrier ou e-mail;Moyenne;À faire;Brouillon éditable
+F-014;Prototype;Créer une relance;Moyenne;À faire;Relance planifiée après accord
+F-015;Mesure;Définir les KPI de bêta;Haute;À faire;Résolution, retour, confiance, paiement
