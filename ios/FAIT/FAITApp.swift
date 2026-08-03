@@ -20,6 +20,7 @@ struct FAITApp: App {
     @StateObject private var environment = AppEnvironment()
     @StateObject private var integrations = NativeIntegrationController()
     @StateObject private var security = AppSecurityController()
+    @State private var showNativeControlCenter = false
 
     var body: some Scene {
         WindowGroup {
@@ -39,6 +40,32 @@ struct FAITApp: App {
                 .environmentObject(security)
                 .tint(FAITColor.trustGreen)
 
+                if hasCompletedOnboarding,
+                   environment.selectedTab == .profile,
+                   !security.isLocked {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button {
+                                showNativeControlCenter = true
+                            } label: {
+                                Label("Centre iPhone", systemImage: "iphone.gen3.badge.play")
+                                    .font(.subheadline.weight(.bold))
+                                    .foregroundStyle(.white)
+                                    .padding(.horizontal, 16)
+                                    .frame(height: 48)
+                                    .background(FAITColor.trustGreen, in: Capsule())
+                                    .shadow(color: FAITColor.deepGreen.opacity(0.22), radius: 14, y: 7)
+                            }
+                        }
+                        .padding(.horizontal, 18)
+                        .padding(.bottom, 92)
+                    }
+                    .transition(.scale.combined(with: .opacity))
+                    .zIndex(8)
+                }
+
                 if security.isLocked {
                     FAITLockScreen()
                         .environmentObject(security)
@@ -47,6 +74,13 @@ struct FAITApp: App {
                 }
             }
             .animation(.easeInOut(duration: 0.2), value: security.isLocked)
+            .animation(.snappy, value: environment.selectedTab)
+            .sheet(isPresented: $showNativeControlCenter) {
+                NativeControlCenterView()
+                    .environmentObject(environment)
+                    .environmentObject(integrations)
+                    .environmentObject(security)
+            }
             .task {
                 integrations.publishWidgetSnapshot(from: environment)
                 if security.faceIDEnabled {
