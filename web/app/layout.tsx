@@ -3,10 +3,11 @@ import "./globals.css";
 import "./v2.css";
 import "./brand.css";
 import "./connected-test.css";
+import "./gmail-pilot.css";
 
 export const metadata: Metadata = {
-  title: "FAIT. — Assistant quotidien connecté",
-  description: "Environnement de test du facilitateur de vie quotidienne FAIT.",
+  title: "FAIT. — Pilote Gmail OAuth",
+  description: "Pilote réel Gmail OAuth de l’assistant quotidien connecté FAIT.",
 };
 
 export const viewport: Viewport = {
