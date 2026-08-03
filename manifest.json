@@ -1,0 +1,13 @@
+{
+  "project": "FAIT.",
+  "version": "0.1",
+  "date": "2026-08-03",
+  "status": "incubation",
+  "priority_split": {
+    "Velvet": 80,
+    "FAIT": 20
+  },
+  "working_name_only": true,
+  "core_promise": "Vous demandez. C'est fait.",
+  "repository": "Velvet-Application/Fait"
+}
