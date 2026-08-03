@@ -48,7 +48,7 @@ La typographie principale est **Satoshi** et la typographie secondaire est **Int
 
 ### Décision 011 — Applications natives
 
-L'objectif produit est confirmé : applications natives iPhone et Android, avec une expérience adaptée à chaque plateforme plutôt qu'une simple interface identique emballée sur deux systèmes.
+L'objectif produit reste confirmé : applications natives iPhone et Android, avec une expérience adaptée à chaque plateforme plutôt qu'une simple interface identique emballée sur deux systèmes.
 
 L'identité reste commune, mais les comportements, la navigation, les transitions, les icônes et certains composants respectent les conventions propres à iOS et Android.
 
@@ -93,3 +93,11 @@ Toute validation sensible porte sur un contenu figé. Une modification substanti
 ### Décision 017 — Périmètre du prototype
 
 Le premier prototype ne contient ni paiement, ni accès bancaire, ni marketplace, ni appel vocal IA, ni automatisation irréversible sans accord explicite.
+
+### Décision 018 — Priorité iOS dans Xcode
+
+Le premier prototype est réalisé exclusivement pour **iPhone dans Xcode**, avec Swift et SwiftUI.
+
+Il doit être exécutable dans le simulateur et installable sur un iPhone de test. Il utilise des données fictives et des services simulés derrière des protocoles afin de préparer le raccordement futur à l'API.
+
+Android reste une cible produit confirmée, mais sa réalisation est différée jusqu'à validation du parcours, de la navigation, de la confiance et de l'accessibilité sur iPhone.
