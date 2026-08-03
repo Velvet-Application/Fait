@@ -109,3 +109,23 @@ L'architecture web V2 devient la référence officielle : aucun menu latéral pe
 ### Décision 020 — Logo final intégré
 
 Le logo final **Sceau de confiance + FAIT. + « Vous demandez. C'est fait. »** est intégré sous forme vectorielle. Le sceau seul devient l'icône de navigateur et la base des futures icônes d'application iOS et Android.
+
+### Décision 021 — FAIT. devient un orchestrateur du quotidien
+
+La vision cible évolue d'un assistant auquel l'utilisateur confie manuellement une démarche vers un orchestrateur capable, avec autorisation, de détecter les sujets utiles dans les e-mails, documents, calendriers et services connectés, puis de les transformer en dossiers et actions suivies jusqu'à résolution.
+
+### Décision 022 — Connecteurs e-mail et calendriers
+
+Les connecteurs prioritaires sont Gmail, Outlook/Microsoft 365, Google Calendar, Microsoft Calendar et les calendriers locaux iOS et Android. FAIT. pourra analyser les messages entrants, détecter factures, contrats, rendez-vous et échéances, préparer des brouillons et synchroniser les événements autorisés.
+
+### Décision 023 — Autonomie progressive et explicable
+
+L'autonomie est structurée en niveaux : observer, organiser, préparer, exécuter avec confirmation et exécuter sous autorisation permanente limitée. Les paiements, engagements, annulations, réservations payantes, déclarations et envois sensibles restent soumis à confirmation explicite.
+
+### Décision 024 — Connexions et autorisations
+
+Un espace **Connexions et autorisations** remplacera l'idée d'un simple formulaire générique d'identifiants. OAuth, passkeys et API officielles sont prioritaires. L'enregistrement d'un mot de passe pour un service sans API constitue un dernier recours nécessitant coffre chiffré, authentification renforcée, journalisation, révocation et audit de sécurité dédié.
+
+### Décision 025 — Premier lot connecté
+
+La première intégration réelle commencera par Gmail en lecture limitée, la détection de quatre catégories utiles, la création proposée d'un dossier, le calendrier interne, l'ajout contrôlé au calendrier iPhone et la préparation d'un brouillon. Aucun envoi n'aura lieu sans validation explicite dans ce premier lot.
