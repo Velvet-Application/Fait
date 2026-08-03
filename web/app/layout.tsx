@@ -2,10 +2,11 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./v2.css";
 import "./brand.css";
+import "./connected-test.css";
 
 export const metadata: Metadata = {
-  title: "FAIT. — Vous demandez. C’est fait.",
-  description: "Prototype web responsive de l’assistant d’exécution du quotidien FAIT.",
+  title: "FAIT. — Assistant quotidien connecté",
+  description: "Environnement de test du facilitateur de vie quotidienne FAIT.",
 };
 
 export const viewport: Viewport = {
