@@ -1,3 +1,4 @@
+import MessageUI
 import SwiftUI
 
 struct NativeControlCenterView: View {
@@ -7,6 +8,8 @@ struct NativeControlCenterView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var calendarConsent = false
     @State private var draftConsent = false
+    @State private var appleMailConsent = false
+    @State private var appleMailDraft: AppleMailDraft?
 
     private var nextAppointment: ConnectedSignal? {
         environment.signals.first(where: { $0.kind == .appointment })
@@ -114,6 +117,57 @@ struct NativeControlCenterView: View {
                     .padding(17)
                     .glassCard(cornerRadius: 23)
 
+                    VStack(alignment: .leading, spacing: 14) {
+                        Label("Mail Apple", systemImage: "envelope.open.fill")
+                            .font(.headline)
+                            .foregroundStyle(FAITColor.oliveCharcoal)
+
+                        if let contract = contractSignal {
+                            Text(contract.title)
+                                .font(.subheadline.weight(.semibold))
+                            Text("FAIT. prépare une réponse puis ouvre le composeur natif d’iOS. Vous pouvez la modifier, l’enregistrer comme brouillon ou l’envoyer vous-même.")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+
+                            ConsentToggle(
+                                isOn: $appleMailConsent,
+                                text: "J’ai vérifié que je souhaite ouvrir cette réponse dans Mail."
+                            )
+
+                            Button {
+                                let recipient = contract.metadata["replyTo"] ?? contract.sender
+                                let subject = "Re: \(contract.title)"
+                                let body = contract.metadata["suggestedReply"] ?? "Bonjour,\n\nJ’ai pris connaissance de votre message. Merci de me confirmer les conditions applicables et les solutions disponibles.\n\nCordialement,\nCyril"
+                                appleMailDraft = AppleMailDraft(
+                                    recipients: [recipient],
+                                    subject: subject,
+                                    body: body
+                                )
+                                appleMailConsent = false
+                            } label: {
+                                Label("Ouvrir dans Mail", systemImage: "paperplane")
+                            }
+                            .buttonStyle(SecondaryActionButtonStyle())
+                            .disabled(!appleMailConsent || !MFMailComposeViewController.canSendMail())
+                            .opacity(appleMailConsent && MFMailComposeViewController.canSendMail() ? 1 : 0.5)
+
+                            if !MFMailComposeViewController.canSendMail() {
+                                Label(
+                                    "Configurez au moins un compte dans l’app Mail d’Apple pour activer cette fonction.",
+                                    systemImage: "exclamationmark.triangle"
+                                )
+                                .font(.caption)
+                                .foregroundStyle(Color.orange)
+                            }
+                        } else {
+                            Text("Aucun message à préparer dans Mail pour le moment.")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .padding(17)
+                    .glassCard(cornerRadius: 23)
+
                     WidgetInformationCard()
 
                     Label(
@@ -134,6 +188,52 @@ struct NativeControlCenterView: View {
                     Button("Fermer") { dismiss() }
                 }
             }
+            .sheet(item: $appleMailDraft) { draft in
+                AppleMailComposer(draft: draft)
+            }
+        }
+    }
+}
+
+private struct AppleMailDraft: Identifiable {
+    let id = UUID()
+    let recipients: [String]
+    let subject: String
+    let body: String
+}
+
+private struct AppleMailComposer: UIViewControllerRepresentable {
+    @Environment(\.dismiss) private var dismiss
+    let draft: AppleMailDraft
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(dismiss: dismiss)
+    }
+
+    func makeUIViewController(context: Context) -> MFMailComposeViewController {
+        let controller = MFMailComposeViewController()
+        controller.mailComposeDelegate = context.coordinator
+        controller.setToRecipients(draft.recipients)
+        controller.setSubject(draft.subject)
+        controller.setMessageBody(draft.body, isHTML: false)
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: Context) {}
+
+    final class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        private let dismiss: DismissAction
+
+        init(dismiss: DismissAction) {
+            self.dismiss = dismiss
+        }
+
+        func mailComposeController(
+            _ controller: MFMailComposeViewController,
+            didFinishWith result: MFMailComposeResult,
+            error: Error?
+        ) {
+            dismiss()
         }
     }
 }
