@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./v2.css";
+import "./brand.css";
 
 export const metadata: Metadata = {
   title: "FAIT. — Vous demandez. C’est fait.",
