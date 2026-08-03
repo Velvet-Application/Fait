@@ -12,8 +12,37 @@
 		A10000000000000000000022 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* MockServices.swift */; };
 		A10000000000000000000023 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* DesignSystem.swift */; };
 		A10000000000000000000024 /* AppViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* AppViews.swift */; };
+		A10000000000000000000025 /* NativeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* NativeServices.swift */; };
+		A10000000000000000000026 /* NativeControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000016 /* NativeControlCenterView.swift */; };
+		A10000000000000000000027 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000060 /* GoogleSignIn */; };
 		A10000000000000000000031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000030 /* Assets.xcassets */; };
+		B10000000000000000000020 /* FAITWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* FAITWidget.swift */; };
+		B10000000000000000000021 /* FAITWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* FAITWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B10000000000000000000030 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10000000000000000000004;
+			remoteInfo = FAITWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B10000000000000000000006 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B10000000000000000000021 /* FAITWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A10000000000000000000010 /* FAITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAITApp.swift; sourceTree = "<group>"; };
@@ -21,12 +50,28 @@
 		A10000000000000000000012 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		A10000000000000000000013 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		A10000000000000000000014 /* AppViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViews.swift; sourceTree = "<group>"; };
+		A10000000000000000000015 /* NativeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeServices.swift; sourceTree = "<group>"; };
+		A10000000000000000000016 /* NativeControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeControlCenterView.swift; sourceTree = "<group>"; };
+		A10000000000000000000017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000000000000000000018 /* FAIT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FAIT.entitlements; sourceTree = "<group>"; };
 		A10000000000000000000030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000005 /* FAIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000005 /* FAITWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FAITWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000010 /* FAITWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAITWidget.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000012 /* FAITWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FAITWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10000000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000027 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10000000000000000000008 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A1000000000000000000000F /* FAIT */,
+				B1000000000000000000000F /* FAITWidget */,
 				A10000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,15 +98,30 @@
 				A10000000000000000000012 /* MockServices.swift */,
 				A10000000000000000000013 /* DesignSystem.swift */,
 				A10000000000000000000014 /* AppViews.swift */,
+				A10000000000000000000015 /* NativeServices.swift */,
+				A10000000000000000000016 /* NativeControlCenterView.swift */,
+				A10000000000000000000017 /* Info.plist */,
+				A10000000000000000000018 /* FAIT.entitlements */,
 				A10000000000000000000030 /* Assets.xcassets */,
 			);
 			path = FAIT;
+			sourceTree = "<group>";
+		};
+		B1000000000000000000000F /* FAITWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000010 /* FAITWidget.swift */,
+				B10000000000000000000011 /* Info.plist */,
+				B10000000000000000000012 /* FAITWidget.entitlements */,
+			);
+			path = FAITWidget;
 			sourceTree = "<group>";
 		};
 		A10000000000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000005 /* FAIT.app */,
+				B10000000000000000000005 /* FAITWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,15 +136,37 @@
 				A10000000000000000000006 /* Sources */,
 				A10000000000000000000008 /* Frameworks */,
 				A10000000000000000000007 /* Resources */,
+				B10000000000000000000006 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B10000000000000000000031 /* PBXTargetDependency */,
+			);
+			name = FAIT;
+			packageProductDependencies = (
+				A10000000000000000000060 /* GoogleSignIn */,
+			);
+			productName = FAIT;
+			productReference = A10000000000000000000005 /* FAIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B10000000000000000000004 /* FAITWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1000000000000000000000A /* Build configuration list for PBXNativeTarget "FAITWidget" */;
+			buildPhases = (
+				B10000000000000000000009 /* Sources */,
+				B10000000000000000000008 /* Frameworks */,
+				B10000000000000000000007 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FAIT;
-			productName = FAIT;
-			productReference = A10000000000000000000005 /* FAIT.app */;
-			productType = "com.apple.product-type.application";
+			name = FAITWidget;
+			productName = FAITWidget;
+			productReference = B10000000000000000000005 /* FAITWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,10 +175,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					A10000000000000000000004 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					B10000000000000000000004 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -109,11 +195,15 @@
 				Base,
 			);
 			mainGroup = A10000000000000000000002;
+			packageReferences = (
+				A10000000000000000000050 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = A10000000000000000000003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A10000000000000000000004 /* FAIT */,
+				B10000000000000000000004 /* FAITWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000000000000000000031 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +236,28 @@
 				A10000000000000000000022 /* MockServices.swift in Sources */,
 				A10000000000000000000023 /* DesignSystem.swift in Sources */,
 				A10000000000000000000024 /* AppViews.swift in Sources */,
+				A10000000000000000000025 /* NativeServices.swift in Sources */,
+				A10000000000000000000026 /* NativeControlCenterView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10000000000000000000009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000020 /* FAITWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B10000000000000000000031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10000000000000000000004 /* FAITWidget */;
+			targetProxy = B10000000000000000000030 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A1000000000000000000000B /* Debug */ = {
@@ -186,17 +301,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FAIT/FAIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "FAIT.";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FAIT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.velvetapplication.fait;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -212,21 +324,58 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FAIT/FAIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "FAIT.";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FAIT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.velvetapplication.fait;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B1000000000000000000000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = FAITWidget/FAITWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FAITWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.velvetapplication.fait.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B1000000000000000000000E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = FAITWidget/FAITWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FAITWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.velvetapplication.fait.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -254,7 +403,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B1000000000000000000000A /* Build configuration list for PBXNativeTarget "FAITWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1000000000000000000000D /* Debug */,
+				B1000000000000000000000E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10000000000000000000050 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000000000000000000060 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000050 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A10000000000000000000001 /* Project object */;
 }
